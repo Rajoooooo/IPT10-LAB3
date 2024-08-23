@@ -13,7 +13,7 @@ $contact_number = $_POST['contact_number'];
 $agree = $_POST['agree'];
 $answers = $_POST['answers'] ?? '';
 
-// Ensure $answers is a string
+
 if (is_array($answers)) {
     $answers = implode('', $answers); // Convert array to string if needed
 }
