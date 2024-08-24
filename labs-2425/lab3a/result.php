@@ -15,7 +15,7 @@ $answers = $_POST['answers'] ?? '';
 
 
 if (is_array($answers)) {
-    $answers = implode('', $answers); // Convert array to string if needed
+    $answers = implode('', $answers); 
 }
 
 // Compute score

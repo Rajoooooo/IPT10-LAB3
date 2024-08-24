@@ -26,8 +26,8 @@ $answers = $_POST['answers'] ?? '';
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Set the countdown time in seconds
-            var countdownTime = 60; // 60 seconds
+            // Set the countdown time in 60 seconds 
+            var countdownTime = 60; 
 
             // Get the timer element
             var timerElement = document.getElementById('timer');
@@ -35,7 +35,7 @@ $answers = $_POST['answers'] ?? '';
             // Function to update the timer
             function updateTimer() {
                 if (countdownTime <= 0) {
-                    document.getElementById('quiz-form').submit(); // Auto-submit the form
+                    document.getElementById('quiz-form').submit(); 
                     return;
                 }
 

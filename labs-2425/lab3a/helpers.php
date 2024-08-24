@@ -3,13 +3,13 @@
 define('MAX_QUESTION_NUMBER', 5);
 
 function retrieve_questions() {
-    // 1. Open the questions/triviaquiz.json file
+    //Open the questions/triviaquiz.json file
     $json_string = file_get_contents("./questions/triviaquiz.json");
     
-    // 2. Convert it the array
+    //Convert it the array
     $json_data = json_decode($json_string, true);
     
-    // 3. Return the trivia questions array data
+    //Return the trivia questions array data
     return $json_data;
 }
 

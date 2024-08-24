@@ -24,11 +24,9 @@ $agree = $_POST['agree'] ?? '';
         document.addEventListener('DOMContentLoaded', function() {
             const checkbox = document.querySelector('input[name="agree"]');
             const startQuizButton = document.querySelector('button[type="submit"]');
-
-            // Initial button state based on checkbox status
+            
             startQuizButton.disabled = !checkbox.checked;
 
-            // Add event listener to checkbox
             checkbox.addEventListener('change', function() {
                 startQuizButton.disabled = !checkbox.checked;
             });

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css" />
     <!-- Add the Bulma CSS here -->
 
+    <!-- script use to disable button -->
     <script>
         function validateForm() {
             const name = document.querySelector('input[name="complete_name"]').value.trim();
