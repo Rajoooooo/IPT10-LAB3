@@ -68,6 +68,21 @@ if (isset($_FILES['image_file']) && $_FILES['image_file']['error'] === UPLOAD_ER
     }
 }
 
+// Handle Video File
+if (isset($_FILES['video_file']) && $_FILES['video_file']['error'] === UPLOAD_ERR_OK) {
+    $uploaded_video_file = $upload_directory . basename($_FILES['video_file']['name']);
+    $temporary_file = $_FILES['video_file']['tmp_name'];
+
+    if (move_uploaded_file($temporary_file, $uploaded_video_file)) {
+        ?>
+        <h3>Uploaded Video File:</h3>
+        <embed src="<?php echo $relative_path . basename($_FILES['video_file']['name']); ?>" width="600" height="400" type="application/pdf">
+        <?php
+    } else {
+        echo 'Failed to upload Video file';
+    }
+}
+
 echo '<pre>';
 var_dump($_FILES);
 echo '</pre>';

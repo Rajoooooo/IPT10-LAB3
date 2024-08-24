@@ -1,5 +1,5 @@
 <?php
-if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['audio_file']) || isset($_FILES['audio_file'])){
+if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['audio_file']) || isset($_FILES['audio_file'])|| isset($_FILES['video_file'])){
   echo '<pre>';
   var_dump($_FILES);
   exit;
@@ -55,6 +55,13 @@ if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['a
             <h3>Image File</h3>
             <p class="p-card__content">
             <input type="file" name="image_file" accept=".jpg, .jpeg, .png"/>
+            </p>
+        </div>
+
+        <div class="p-card">
+            <h3>Video File</h3>
+            <p class="p-card__content">
+            <input type="file" name="video_file" accept=".mp4"/>
             </p>
         </div>
 
