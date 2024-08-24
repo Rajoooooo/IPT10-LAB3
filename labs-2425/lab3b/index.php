@@ -1,3 +1,11 @@
+<?php
+if(isset($_FILES['pdf_file']) || isset($_FILES['text_file'])) {
+  echo '<pre>';
+  var_dump($_FILES);
+  exit;
+}
+
+?>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,7 +29,7 @@
   <div class="col">
     <h4>File Upload</h4>
 
-    <form>
+    <form method="post" enctype="multipart/form-data">
         <div class="p-card">
             <h3>Text File</h3>
             <p class="p-card__content">
@@ -29,8 +37,15 @@
             </p>
         </div>
 
+        <div class="p-card">
+            <h3>PDF File</h3>
+            <p class="p-card__content">
+            <input type="file" name="pdf_file" accept=".pdf" />
+            </p>
+        </div>
+
         <div>
-            <button>
+            <button type="submit">
                 Upload
             </button>
         </div>
