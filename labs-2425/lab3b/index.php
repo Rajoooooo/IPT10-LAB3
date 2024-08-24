@@ -4,8 +4,7 @@ if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['a
   var_dump($_FILES);
   exit;
 }
-
-?>
+?> 
 <html>
 <head>
     <meta charset="utf-8">
@@ -29,7 +28,7 @@ if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['a
   <div class="col">
     <h4>File Upload</h4>
 
-    <form method="post" enctype="multipart/form-data">
+    <form action="uploaded.php" method="post" enctype="multipart/form-data">
         <div class="p-card">
             <h3>Text File</h3>
             <p class="p-card__content">
