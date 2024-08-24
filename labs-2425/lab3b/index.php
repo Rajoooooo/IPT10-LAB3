@@ -1,5 +1,5 @@
 <?php
-if(isset($_FILES['pdf_file']) || isset($_FILES['text_file'])) {
+if(isset($_FILES['pdf_file']) || isset($_FILES['text_file']) || isset($_FILES['audio_file'])){
   echo '<pre>';
   var_dump($_FILES);
   exit;
@@ -41,6 +41,13 @@ if(isset($_FILES['pdf_file']) || isset($_FILES['text_file'])) {
             <h3>PDF File</h3>
             <p class="p-card__content">
             <input type="file" name="pdf_file" accept=".pdf" />
+            </p>
+        </div>
+
+        <div class="p-card">
+            <h3>Audio File</h3>
+            <p class="p-card__content">
+            <input type="file" name="audio_file" accept=".mp3" />
             </p>
         </div>
 

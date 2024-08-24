@@ -38,6 +38,21 @@ if (isset($_FILES['pdf_file']) && $_FILES['pdf_file']['error'] === UPLOAD_ERR_OK
     }
 }
 
+// Handle Audio File
+if (isset($_FILES['audio_file']) && $_FILES['audio_file']['error'] === UPLOAD_ERR_OK) {
+    $uploaded_audio_file = $upload_directory . basename($_FILES['audio_file']['name']);
+    $temporary_file = $_FILES['audio_file']['tmp_name'];
+
+    if (move_uploaded_file($temporary_file, $uploaded_audio_file)) {
+        ?>
+        <h3>Uploaded Audio File:</h3>
+        <embed src="<?php echo $relative_path . basename($_FILES['audio_file']['name']); ?>" width="600" height="400" type="application/pdf">
+        <?php
+    } else {
+        echo 'Failed to upload Audio file';
+    }
+}
+
 echo '<pre>';
 var_dump($_FILES);
 echo '</pre>';
